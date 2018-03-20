@@ -13,6 +13,9 @@ from keras.layers.core import Lambda, Flatten, Dense
 def inception_block_1a(X):
     """
     Implementation of an inception block
+    The difference between inception_block_1a and inception_block_1a are:
+    	1) Number of filters in X_5x5 16,32 -> 32,64
+		2) Number of filters in X_pool 32 -> 64
     """
     
     X_3x3 = Conv2D(96, (1, 1), data_format='channels_first', name ='inception_3a_3x3_conv1')(X)
